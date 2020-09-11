@@ -13,7 +13,7 @@
     http://localhost:3000/sensors/summary
     http://localhost:3000/sensors/diff
     
-    **Proper API design later**
+   **Proper API design later**
     
 # INSTRUCTIONS
 
