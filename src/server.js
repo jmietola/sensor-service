@@ -26,7 +26,7 @@
                         Copyright (c) 2020 Jouni Mietola
 */
 
-const internalService = require('./src/utils/internal.js');
+const internalService = require('./services/internalService.js');
 var express = require('express');
 const app = express();
 
@@ -40,10 +40,10 @@ const app = express();
 })();
 
 // ##### Sensor data summary
-var summaryRouter = require('./src/routes/summary')
+var summaryRouter = require('./routes/summary')
 app.use('/sensors', summaryRouter);  // Add summary routes
 
 //##### Temperature difference
-var diffRouter = require('./src/routes/difference')
+var diffRouter = require('./routes/difference')
 app.use('/sensors', diffRouter)  // Add diff routes
 
