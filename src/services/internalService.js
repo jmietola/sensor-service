@@ -1,4 +1,4 @@
-const sensorRepository = require('../repositories/sensorRepository');
+const sensorRepository = require('../repositories/sqliteRepository');
 const https = require('https');
 const mathHelper = require('../utils/mathHelper');
 const axios = require('axios');
