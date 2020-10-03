@@ -1,4 +1,4 @@
-exports.AddSensorData = function (db, data) {
+exports.Add = function (db, data) {
 
     let sqlInsert = `INSERT INTO datas(id, time, value) VALUES (?, ?, ?)`;
     let dataObject = JSON.parse(data);
@@ -14,11 +14,11 @@ exports.AddSensorData = function (db, data) {
     
 }
 
-exports.UpdateSensorData = function (db, data) {
+exports.Update = function (db, data) {
     
 }
 
-exports.GetSensorDataSummary = function (db, dataHandler) {
+exports.Get = function (db, dataHandler) {
     
       let sql = `SELECT id, time, value FROM datas`;
       let stmt = db.prepare(sql);

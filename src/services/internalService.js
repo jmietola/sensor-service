@@ -44,7 +44,7 @@ exports.update_sensor_data = function (db) {
         });
       
         response.on('end', () => {
-          sensorRepository.AddSensorData(db, data);  
+          sensorRepository.Add(db, data);  
         });
       
       }).on("error", (error) => {
@@ -58,6 +58,6 @@ exports.update_sensor_data = function (db) {
 }
 
 exports.sensor_summary = function (db) {  
-    sensorRepository.GetSensorDataSummary(db, mathHelper.countSummary);
+    sensorRepository.Get(db, mathHelper.countSummary);
 }
 
