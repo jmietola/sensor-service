@@ -33,7 +33,7 @@
 
 # TODOs
 
-    Add API GATEWAY should be implemented so that we could serve different clients and protocols as well.
+    API GATEWAY should be implemented so that we could serve different clients and protocols as well.
 
     Add Docker.
 
