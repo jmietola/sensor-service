@@ -15,7 +15,7 @@
     
    **Proper API design later**
     
-# INSTRUCTIONS
+# Instructions
 
     Server:
 
@@ -31,19 +31,19 @@
     Tests:
     npm test
 
-# TODOs
+# Todos
 
     API GATEWAY should be implemented so that we could serve different clients and protocols as well.
 
     Add Docker.
-
-    Add Typescript.
-
-    Add Swagger, Monitoring, more tests.
     
-    Add CQRS + Event Sourcing
+   ~~Add Typescript.~~
+   
+    Add Swagger, Monitoring, more tests.
+   
+   ~~Add CQRS + Event Sourcing~~
 
-# NOTEs
+# Notes
 
     I'd gladly accept all the feedback.
 
