@@ -37,10 +37,10 @@
 
     Add Docker.
     
-   ~~Add Typescript.~~
-   
     Add Swagger, Monitoring, more tests.
-   
+    
+   ~~Add Typescript.~~
+  
    ~~Add CQRS + Event Sourcing~~
 
 # Notes
