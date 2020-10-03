@@ -1,6 +1,7 @@
 const sensorRepository = require('../repositories/sensorRepository');
 const https = require('https');
 const mathHelper = require('../utils/mathHelper');
+const axios = require('axios');
 
 exports.addAndInitDepedencies = async function () {
   //##### Database Singleton Instance
@@ -34,24 +35,11 @@ exports.Database = (function () {
 })();
 
 exports.update_sensor_data = function (db) {
-
-    function internalFunc (db) {
-      https.get('https://dummy-sensors.azurewebsites.net/api/sensor/iddqd', (response) => {
-        let data = '';
-      
-        response.on('data', (chunk) => {
-          data += chunk;
-        });
-      
-        response.on('end', () => {
-          sensorRepository.Add(db, data);  
-        });
-      
-      }).on("error", (error) => {
-        console.log("Error: " + error.message);
-      });
+    async function internalFunc (db) {
+      const url = "https://dummy-sensors.azurewebsites.net/api/sensor/iddqd";  
+      const response = await axios.get(`${url}`);
+      sensorRepository.Add(db, JSON.stringify(response.data));  
     }
-
     setInterval(() => {
       internalFunc(db);
     }, 1000)
