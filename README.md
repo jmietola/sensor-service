@@ -40,10 +40,10 @@
     Add Typescript.
 
     Add Swagger, Monitoring, more tests.
+    
+    Add CQRS + Event Sourcing
 
 # NOTEs
-
-    Event sourcing could be interesting here since data is already stored for that purpose.
 
     I'd gladly accept all the feedback.
 
