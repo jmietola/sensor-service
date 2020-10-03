@@ -1,6 +1,6 @@
 
 var expect = require("chai").expect;
-var internal = require("../src/utils/internal.js");
+var internal = require("../src/services/internalService.js");
 
 describe("Gathers Internal Summary Object", function() {
     it("Creates first object if summary object is empty", function() {
