@@ -1,4 +1,8 @@
-exports.Add = function (db, data) {
+
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('./iot_db.sqlite')
+
+exports.Add = function (data) {
 
     let sqlInsert = `INSERT INTO datas(id, time, value) VALUES (?, ?, ?)`;
     let dataObject = JSON.parse(data);
@@ -14,11 +18,11 @@ exports.Add = function (db, data) {
     
 }
 
-exports.Update = function (db, data) {
+exports.Update = function (data) {
     
 }
 
-exports.Get = function (db, dataHandler) {
+exports.Get = function (dataHandler) {
     
       let sql = `SELECT id, time, value FROM datas`;
       let stmt = db.prepare(sql);

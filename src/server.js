@@ -31,7 +31,8 @@ var express = require('express');
 const app = express();
 
 (async () => {
-  await internalService.addAndInitDepedencies();
+  internalService.update_sensor_data()
+  internalService.sensor_summary()
   // configure and start server
   const port = 3000;
   app.listen(port, () => {
