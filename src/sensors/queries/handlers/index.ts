@@ -1,3 +1,3 @@
-import { GetHeroesHandler } from './get-heroes.handler';
+import { GetSensorsHandler } from './get-sensors.handler';
 
-export const QueryHandlers = [GetHeroesHandler];
+export const QueryHandlers = [GetSensorsHandler];

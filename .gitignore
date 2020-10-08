@@ -13,7 +13,7 @@ package-lock.json
 hackky.code-workspace
 
 # dist
-/dist
+/built
 
 # tests
 /test

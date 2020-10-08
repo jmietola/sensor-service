@@ -1,14 +1,14 @@
 import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
 import * as clc from 'cli-color';
-import { HeroRepository } from '../../repository/hero.repository';
-import { GetHeroesQuery } from '../impl';
+import { SensorRepository } from '../../repository/sensor.repository';
+import { GetSensorsQuery } from '../impl';
 
-@QueryHandler(GetHeroesQuery)
-export class GetHeroesHandler implements IQueryHandler<GetHeroesQuery> {
-  constructor(private readonly repository: HeroRepository) {}
+@QueryHandler(GetSensorsQuery)
+export class GetSensorsHandler implements IQueryHandler<GetSensorsQuery> {
+  constructor(private readonly repository: SensorRepository) {}
 
-  async execute(query: GetHeroesQuery) {
-    console.log(clc.yellowBright('Async GetHeroesQuery...'));
+  async execute(query: GetSensorsQuery) {
+    console.log(clc.yellowBright('Async GetSensorsQuery...'));
     return this.repository.findAll();
   }
 }

@@ -4,7 +4,7 @@ import { SensorRepository } from '../../repository/sensor.repository';
 import { FlashAlertLedCommand } from '../impl/flash-alert-led.command';
 
 @CommandHandler(FlashAlertLedCommand)
-export class DropAncientItemHandler
+export class FlashAlertLedHandler
   implements ICommandHandler<FlashAlertLedCommand> {
   constructor(
     private readonly repository: SensorRepository,

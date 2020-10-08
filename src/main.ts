@@ -6,6 +6,7 @@ const internalService = require('./services/internalService.js');
   internalService.update_sensor_data()
   internalService.sensor_summary()
   const app = await NestFactory.create(ApplicationModule);
+
   app.listen(3000, () => console.log('Application is listening on port 3000.'));
   // ##### Sensor data summary
   var summaryRouter = require('./routes/summary')

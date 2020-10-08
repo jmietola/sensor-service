@@ -1,4 +1,4 @@
-import { HeroKilledDragonHandler } from './hero-killed-dragon.handler';
-import { HeroFoundItemHandler } from './hero-found-item.handler';
+import { SensorAlertedDeviceHandler } from './sensor-alerted-device.handler';
+import { SensorFoundItemHandler } from './sensor-found-item.handler';
 
-export const EventHandlers = [HeroKilledDragonHandler, HeroFoundItemHandler];
+export const EventHandlers = [SensorAlertedDeviceHandler, SensorFoundItemHandler];

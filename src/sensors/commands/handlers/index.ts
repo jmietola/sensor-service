@@ -1,4 +1,4 @@
-import { KillDragonHandler } from './kill-dragon.handler';
-import { DropAncientItemHandler } from './drop-ancient-item.handler';
+import { AlertDeviceHandler } from './alert-device.handler';
+import { FlashAlertLedHandler } from './flash-alert-led.handler';
 
-export const CommandHandlers = [KillDragonHandler, DropAncientItemHandler];
+export const CommandHandlers = [AlertDeviceHandler, FlashAlertLedHandler];

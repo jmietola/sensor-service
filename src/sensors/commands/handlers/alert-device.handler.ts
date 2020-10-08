@@ -4,7 +4,7 @@ import { SensorRepository } from '../../repository/sensor.repository';
 import { AlertDeviceCommand } from '../impl/alert-device.command';
 
 @CommandHandler(AlertDeviceCommand)
-export class KillDragonHandler implements ICommandHandler<AlertDeviceCommand> {
+export class AlertDeviceHandler implements ICommandHandler<AlertDeviceCommand> {
   constructor(
     private readonly repository: SensorRepository,
     private readonly publisher: EventPublisher,

@@ -1,4 +1,12 @@
-const sensorDifference = async (sensor) => {
+import { IDifferenceService } from "./IDifferenceService";
+
+
+export class DifferenceService implements IDifferenceService { // Not exported
+  constructor () {
+  }
+
+  sensorDifference = async (sensor) => {
+    console.log("HMM");
     const axios = require('axios');
     const url = "http://dummy-sensors.azurewebsites.net/api/weather";  
     sensor = "iddqd";
@@ -8,7 +16,4 @@ const sensorDifference = async (sensor) => {
   
     return Math.abs(firstRequest.data.temperature - secondRequest.data.data).toString()
   }
-  
-  module.exports = {
-    sensorDifference
-  }
+}

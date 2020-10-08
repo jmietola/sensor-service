@@ -1,12 +1,12 @@
 import { IEventHandler } from '@nestjs/cqrs';
 import { EventsHandler } from '@nestjs/cqrs/dist/decorators/events-handler.decorator';
 import * as clc from 'cli-color';
-import { HeroKilledDragonEvent } from '../impl/hero-killed-dragon.event';
+import { SensorAlertedDeviceEvent } from '../impl/sensor-alerted-device.event';
 
-@EventsHandler(HeroKilledDragonEvent)
-export class HeroKilledDragonHandler
-  implements IEventHandler<HeroKilledDragonEvent> {
-  handle(event: HeroKilledDragonEvent) {
-    console.log(clc.greenBright('HeroKilledDragonEvent...'));
+@EventsHandler(SensorAlertedDeviceEvent)
+export class SensorAlertedDeviceHandler
+  implements IEventHandler<SensorAlertedDeviceEvent> {
+  handle(event: SensorAlertedDeviceEvent) {
+    console.log(clc.greenBright('SensorAlertedDeviceEvent...'));
   }
 }
